@@ -1,0 +1,95 @@
+# This German Language File: Copyright (C) 2012 by David Decker of deckerweb.de & genesisthemes.de
+# This file is distributed under the same license as the bbPress Moderation Plugin package.
+#
+# Weitere deutsche Sprachdateien fuer bbPress und WordPress finden Sie unter:
+# --> http://deckerweb.de/sprachdateien/
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bbPress Moderation\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/bbpressmoderation\n"
+"POT-Creation-Date: 2012-01-11 11:11+0100\n"
+"PO-Revision-Date: 2012-01-11 11:11+0100\n"
+"Last-Translator: David Decker <deckerweb.mobil@googlemail.com>\n"
+"Language-Team: DECKERWEB <deckerweb.mobil@googlemail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: bbpressmoderation.php:155
+#: bbpressmoderation.php:166
+#@ bbpressmoderation
+msgid "(Awaiting moderation)"
+msgstr "(Wartet auf Moderatin)"
+
+#: bbpressmoderation.php:216
+#, php-format
+#@ bbpressmoderation
+msgid "New topic/reply awaiting moderation on your site %s: %s"
+msgstr "Neues Thema/ neue Antwort erwartet Moderation auf Ihrer Webseite %s: %s"
+
+#: bbpressmoderation.php:217
+#, php-format
+#@ bbpressmoderation
+msgid "[%s] bbPress Moderation"
+msgstr "[%s] bbPress Moderation"
+
+#: bbpressmoderation.php:230
+#@ bbpressmoderation
+msgid "bbPress Moderation"
+msgstr "bbPress Moderation"
+
+#: bbpressmoderation.php:264
+#@ bbpressmoderation
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: bbpressmoderation.php:287
+#@ bbpressmoderation
+msgid "bbPress Moderation settings"
+msgstr "bbPress Moderation Einstellungen"
+
+#: bbpressmoderation.php:295
+#@ bbpressmoderation
+msgid "E-mail me whenever"
+msgstr "E-Mail senden, immer dann, wenn"
+
+#: bbpressmoderation.php:298
+#@ bbpressmoderation
+msgid "A topic or reply is held for moderation"
+msgstr "Ein Thema oder eine Antwort zur Moderation vorgehalten wird"
+
+#: bbpressmoderation.php:303
+#@ bbpressmoderation
+msgid "Do not moderate"
+msgstr "Nicht moderieren"
+
+#: bbpressmoderation.php:306
+#@ bbpressmoderation
+msgid "A topic or reply by a previously approved author"
+msgstr "Ein Thema oder eine Antwort von einem schon genehmigten Autor"
+
+#: bbpressmoderation.php:311
+#@ bbpressmoderation
+msgid "Anonymous topics and replies"
+msgstr "Anonyme Themen und Antworten"
+
+#: bbpressmoderation.php:314
+#@ bbpressmoderation
+msgid "Always moderate"
+msgstr "Immer moderieren"
+
+#: bbpressmoderation.php:322
+#@ bbpressmoderation
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+

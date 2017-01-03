@@ -1,0 +1,104 @@
+# Translation of the WordPress plugin bbPress Moderation 1.2 by Ian Haycox.
+# Copyright (C) 2012 Ian Haycox
+# This file is distributed under the same license as the bbPress Moderation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bbPress Moderation 1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bbpressmoderation\n"
+"POT-Creation-Date: 2012-02-18 10:52+0100\n"
+"PO-Revision-Date: 2013-02-13 23:34+0100\n"
+"Last-Translator: Spaseski Naum <naum.spaseski@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: bbpressmoderation.php:183 bbpressmoderation.php:201
+#: bbpressmoderation.php:203
+msgid "(Awaiting moderation)"
+msgstr "(Чека модерирање)"
+
+#: bbpressmoderation.php:271
+#, php-format
+msgid "New topic/reply awaiting moderation on your site %s: %s"
+msgstr "Нова тема/мислење чека одобрување на твојот сајт %s: %s"
+
+#: bbpressmoderation.php:283
+#, php-format
+msgid "[%s] bbPress Moderation"
+msgstr "[%s] bbPress Одобрување"
+
+#. #-#-#-#-#  bbpressmoderation.pot (bbPress Moderation 1.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: bbpressmoderation.php:295
+msgid "bbPress Moderation"
+msgstr "bbPress Одобрување"
+
+#: bbpressmoderation.php:361
+msgid "Settings"
+msgstr "Опции"
+
+#: bbpressmoderation.php:384
+msgid "bbPress Moderation settings"
+msgstr "bbPress Опции за одобрување"
+
+#: bbpressmoderation.php:392
+msgid "E-mail me whenever"
+msgstr "Прати ми мејл кога можеш"
+
+#: bbpressmoderation.php:395
+msgid "A topic or reply is held for moderation"
+msgstr "Темата или мислењето е задржано за одобрување"
+
+#: bbpressmoderation.php:400
+msgid "Do not moderate"
+msgstr "Не задржувај за одобрување"
+
+#: bbpressmoderation.php:403
+msgid "A topic or reply by a previously approved author"
+msgstr "Тема или мислење од предходно одобрен автор"
+
+#: bbpressmoderation.php:408
+msgid "Anonymous topics and replies"
+msgstr "Анонимни теми и мислења"
+
+#: bbpressmoderation.php:411
+msgid "Always moderate"
+msgstr "Секогаш одобрувај"
+
+#: bbpressmoderation.php:419
+msgid "Save Changes"
+msgstr "Сочувај промени"
+
+#: bbpressmoderation.php:424
+msgid ""
+"If you have any problems, please read the <a href=\"http://wordpress.org/"
+"extend/plugins/bbpressmoderation/faq/\">FAQ</a> and if necessary <a href="
+"\"http://ianhaycox.com/contact\">contact me</a>."
+msgstr ""
+"Ако имате проблеми, ве молиме прочитајте ги <a href=\"http://wordpress.org/"
+"extend/plugins/bbpressmoderation/faq/\">FAQ</a> и ако е потребно <a href="
+"\"http://ianhaycox.com/contact\">обратете ми се</a>."
+
+#: bbpressmoderation.php:427
+msgid ""
+"If you like this plugin please consider <a href=\"http://ianhaycox.com/donate"
+"\">donating</a> to fund future development. Thank you."
+msgstr ""
+"Ако ви се допаѓа овој додаток, ве молиме <a href=\"http://ianhaycox.com/"
+"donate\">донирајте</a> за да помогнете во неговото развивање. Ви благодариме."
+
+#. Description of the plugin/theme
+msgid "Moderate bbPress topics and replies"
+msgstr "Одобрувај bbPress теми и мислења"
+
+#. Author of the plugin/theme
+msgid "Ian Haycox"
+msgstr " Ian Haycox"
+
+#. Author URI of the plugin/theme
+msgid "http://ianhaycox.com"
+msgstr "http://ianhaycox.com"

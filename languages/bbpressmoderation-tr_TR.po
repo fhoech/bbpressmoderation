@@ -1,0 +1,104 @@
+# Translation of the WordPress plugin bbPress Moderation 1.2 by Ian Haycox.
+# Copyright (C) 2012 Ian Haycox
+# This file is distributed under the same license as the bbPress Moderation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bbPress Moderation 1.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bbpressmoderation\n"
+"POT-Creation-Date: 2012-02-18 10:52+0100\n"
+"PO-Revision-Date: 2013-05-14 17:11+0200\n"
+"Last-Translator: mustafa çoban <mustafacbn@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#: bbpressmoderation.php:183 bbpressmoderation.php:201
+#: bbpressmoderation.php:203
+msgid "(Awaiting moderation)"
+msgstr "(Moderasyon için bekliyor)"
+
+#: bbpressmoderation.php:271
+#, php-format
+msgid "New topic/reply awaiting moderation on your site %s: %s"
+msgstr "Yeni başlık/mesaj %s sitenizde moderasyon için bekliyor: %s"
+
+#: bbpressmoderation.php:283
+#, php-format
+msgid "[%s] bbPress Moderation"
+msgstr "[%s] bbPress Moderation"
+
+#. #-#-#-#-#  bbpressmoderation.pot (bbPress Moderation 1.2)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: bbpressmoderation.php:295
+msgid "bbPress Moderation"
+msgstr "bbPress Moderation"
+
+#: bbpressmoderation.php:361
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: bbpressmoderation.php:384
+msgid "bbPress Moderation settings"
+msgstr "bbPress Moderasyon ayarları"
+
+#: bbpressmoderation.php:392
+msgid "E-mail me whenever"
+msgstr "Bana posta gönder"
+
+#: bbpressmoderation.php:395
+msgid "A topic or reply is held for moderation"
+msgstr "Bir başlık ya da yanıt moderasyon için bekliyorsa"
+
+#: bbpressmoderation.php:400
+msgid "Do not moderate"
+msgstr "Moderasyon yapma"
+
+#: bbpressmoderation.php:403
+msgid "A topic or reply by a previously approved author"
+msgstr "Bir başlık ya da yanıt daha önce onay almış ise"
+
+#: bbpressmoderation.php:408
+msgid "Anonymous topics and replies"
+msgstr "Anonim başlıklar ve yanıtlar"
+
+#: bbpressmoderation.php:411
+msgid "Always moderate"
+msgstr "Daima moderasyon yap"
+
+#: bbpressmoderation.php:419
+msgid "Save Changes"
+msgstr "Değişiklikleri Kaydet"
+
+#: bbpressmoderation.php:424
+msgid ""
+"If you have any problems, please read the <a href=\"http://wordpress.org/"
+"extend/plugins/bbpressmoderation/faq/\">FAQ</a> and if necessary <a href="
+"\"http://ianhaycox.com/contact\">contact me</a>."
+msgstr ""
+"Bir sorun yaşıyorsanız, lütfen <a href=\"http://wordpress.org/extend/plugins/"
+"bbpressmoderation/faq/\">FAQ</a> sayfasına bakınız ve gerekirse <a href="
+"\"http://ianhaycox.com/contact\">benimle iletişime geçin</a>."
+
+#: bbpressmoderation.php:427
+msgid ""
+"If you like this plugin please consider <a href=\"http://ianhaycox.com/donate"
+"\">donating</a> to fund future development. Thank you."
+msgstr ""
+"Bu eklentiyi beğendiyseniz geliştirmelere devam etmek için lütfen <a href="
+"\"http://ianhaycox.com/donate\">bağışta bulunun</a> Teşekkürler."
+
+#. Description of the plugin/theme
+msgid "Moderate bbPress topics and replies"
+msgstr "bbPress başlık ve yanıtlarını modere edin"
+
+#. Author of the plugin/theme
+msgid "Ian Haycox"
+msgstr "Ian Haycox"
+
+#. Author URI of the plugin/theme
+msgid "http://ianhaycox.com"
+msgstr "http://ianhaycox.com"

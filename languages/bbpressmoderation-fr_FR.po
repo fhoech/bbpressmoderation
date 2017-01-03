@@ -1,0 +1,89 @@
+# Translation of the WordPress plugin bbPress Moderation 1.0 by Ian Haycox.
+# Copyright (C) 2012 Ian Haycox
+# This file is distributed under the same license as the bbPress Moderation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bbPress Moderation 1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bbpressmoderation\n"
+"POT-Creation-Date: 2012-01-09 14:13+0100\n"
+"PO-Revision-Date: 2012-01-12 12:20+0100\n"
+"Last-Translator: Ian Haycox <ian.haycox@gmail.com>\n"
+"Language-Team: Ian Haycox <ian.haycox@gmail.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+
+#: bbpressmoderation.php:155
+#: bbpressmoderation.php:166
+msgid "(Awaiting moderation)"
+msgstr "(En attente de modération)"
+
+#: bbpressmoderation.php:216
+#, php-format
+msgid "New topic/reply awaiting moderation on your site %s: %s"
+msgstr "Nouveau sujet / réponse avec modération en attente sur votre site %s: %s"
+
+#: bbpressmoderation.php:217
+#, php-format
+msgid "[%s] bbPress Moderation"
+msgstr "[%s] bbPress modération"
+
+#. #-#-#-#-#  bbpressmoderation.pot (bbPress Moderation 1.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: bbpressmoderation.php:230
+msgid "bbPress Moderation"
+msgstr "bbPress modération"
+
+#: bbpressmoderation.php:264
+msgid "Settings"
+msgstr "Réglages"
+
+#: bbpressmoderation.php:287
+msgid "bbPress Moderation settings"
+msgstr "bbPress Réglages de modération"
+
+#: bbpressmoderation.php:295
+msgid "E-mail me whenever"
+msgstr "M&rsquo;envoyer un message lorsque"
+
+#: bbpressmoderation.php:298
+msgid "A topic or reply is held for moderation"
+msgstr "Un sujet ou une réponse est en attente de modération"
+
+#: bbpressmoderation.php:303
+msgid "Do not moderate"
+msgstr "Ne pas modérées"
+
+#: bbpressmoderation.php:306
+msgid "A topic or reply by a previously approved author"
+msgstr "Un sujet ou une réponse par un auteur déjà approuvé"
+
+#: bbpressmoderation.php:311
+msgid "Anonymous topics and replies"
+msgstr "Sujets anonymes et réponses"
+
+#: bbpressmoderation.php:314
+msgid "Always moderate"
+msgstr "Toujours modérées"
+
+#: bbpressmoderation.php:322
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#. Description of the plugin/theme
+msgid "Moderate bbPress topics and replies"
+msgstr "Modérée bbPress sujets et réponses"
+
+#. Author of the plugin/theme
+msgid "Ian Haycox"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://ianhaycox.com"
+msgstr ""
+
