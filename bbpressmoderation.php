@@ -372,7 +372,7 @@ class bbPressModeration {
 			$title = '';
 			
 			if ($post) {
-				$title = $post->post_title;
+				$title = bbp_get_reply_title_fallback( $post->post_title, $post_id );
 				$message .= get_permalink($post->ID) . "\r\n\r\n";
 				$author = get_userdata($post->post_author);
 				$message .= "The following content was posted\r\n";
@@ -391,7 +391,7 @@ class bbPressModeration {
 				} else {
 					$message .= "by Anonymous\r\n\r\n";
 				}
-				$message .= $post->post_title . "\r\n" . $post->post_content . "\r\n\r\n";
+				$message .= $post->post_content . "\r\n\r\n";
 			}
 			
 			@wp_mail(get_option('admin_email'), sprintf(__('[%s] bbPress Moderation - %s', self::TD), $blogname, $title), $message);
