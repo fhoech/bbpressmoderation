@@ -206,7 +206,7 @@ class bbPressModeration {
 		// Might possibly mess up the query for posts without publish status !!!!
 		//
 		// fix to allow DB prefixes
-		global $wpdb, $current_user;
+		global $wpdb;
 
 		// We assume it's the main query also if the 'no_found_rows' query var is empty.
 		$is_main_query = $query->is_main_query() || empty( $query->query_vars['no_found_rows'] );
@@ -216,9 +216,7 @@ class bbPressModeration {
 
 		if ( ! ( $is_main_query ? $always_display : $widget_display ) ) return $where;
 
-		get_current_user();
-
-		$where = str_ireplace($wpdb->prefix."posts.post_status = 'publish'", "(".$wpdb->prefix."posts.post_status = 'publish' OR (".$wpdb->prefix."posts.post_status = 'pending'".(current_user_can('moderate') ? "" : " AND ".$wpdb->prefix."posts.post_author = '".$current_user->ID."'")."))", $where);				
+		$where = str_ireplace($wpdb->prefix."posts.post_status = 'publish'", "(".$wpdb->prefix."posts.post_status = 'publish' OR (".$wpdb->prefix."posts.post_status = 'pending'".(current_user_can('moderate') ? "" : " AND ".$wpdb->prefix."posts.post_author = '".get_current_user_id()."'")."))", $where);				
 		
 		return $where;
 	}
@@ -255,11 +253,9 @@ class bbPressModeration {
 	 * @param int $topic_id - topic or reply ID
 	 */
 	function permalink($permalink, $topic_id) {
-		global $post, $current_user;
-
-		get_current_user();
+		global $post;
 		
-		if (!current_user_can('moderate') && $post && $post->post_status == 'pending' && $post->post_author != $current_user->ID) {
+		if (!current_user_can('moderate') && $post && $post->post_status == 'pending' && $post->post_author != get_current_user_id()) {
 			return '#';  // Fudge url to prevent viewing
 		}
 		
@@ -295,13 +291,9 @@ class bbPressModeration {
 	 * @return string - New content
 	 */
 	function content($content, $post_id) {
-		global $current_user;
-
-		get_current_user();
-
 		$post = get_post( $post_id );
 		if ($post && $post->post_status == 'pending') {
-			if (current_user_can('moderate') || $post->post_author == $current_user->ID) {
+			if (current_user_can('moderate') || $post->post_author == get_current_user_id()) {
 				// Admin can see body
 				return __('(Awaiting moderation)', self::TD) . '<br />' . $content;
 			} else {
@@ -872,11 +864,7 @@ class bbPressModeration {
 	 * @return mixed Null if error or topic (in specified form) if success
 	 */
 	function topic( $topic, $output, $filter ) {
-		global $current_user;
-
-		get_current_user();
-		
-		if (!current_user_can('moderate') && $topic && $topic->post_status == 'pending' && $topic->post_author != $current_user->ID)
+		if (!current_user_can('moderate') && $topic && $topic->post_status == 'pending' && $topic->post_author != get_current_user_id())
 			return null;
 
 		return $topic;
@@ -893,11 +881,7 @@ class bbPressModeration {
 	 * @return mixed Null if error or reply (in specified form) if success
 	 */
 	function reply( $reply, $output, $filter ) {
-		global $current_user;
-
-		get_current_user();
-		
-		if (!current_user_can('moderate') && $reply && $reply->post_status == 'pending' && $reply->post_author != $current_user->ID)
+		if (!current_user_can('moderate') && $reply && $reply->post_status == 'pending' && $reply->post_author != get_current_user_id())
 			return null;
 
 		return $reply;
@@ -913,8 +897,6 @@ class bbPressModeration {
 	 * @return array Filtered posts
 	 */
 	function posts_results( $posts, $query ) {
-		global $current_user;
-
 		if ( ! isset( $query->query['post_type'] ) || ! in_array( $query->query['post_type'], array( 'topic', 'reply' ) ) ) return $posts;
 
 		$is_admin = is_admin();
@@ -925,14 +907,12 @@ class bbPressModeration {
 		$always_display = get_option( self::TD . 'always_display' );
 		$widget_display = get_option( self::TD . 'widget_display' );
 
-		get_current_user();
-
 		$can_moderate = current_user_can( 'moderate' );
 
 		$filtered_posts = array();
 
 		foreach ( $posts as $post ) {
-			if ( $is_admin || $post->post_status != 'pending' || ( ( $is_main_query ? $always_display : $widget_display ) && ( $can_moderate || $post->post_author == $current_user->ID ) ) )
+			if ( $is_admin || $post->post_status != 'pending' || ( ( $is_main_query ? $always_display : $widget_display ) && ( $can_moderate || $post->post_author == get_current_user_id() ) ) )
 				$filtered_posts[] = $post;
 		}
 		if ( defined( 'WP_DEBUG' ) && WP_DEBUG && current_user_can( 'administrator' ) )
