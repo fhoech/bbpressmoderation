@@ -679,6 +679,9 @@ class bbPressModeration {
 		// Set public status
 		$topic->post_status = bbp_get_public_status_id();
 
+		// Keep the goddamn date
+		$topic->edit_date = $topic->post_date_gmt = get_gmt_from_date( $topic->post_date, 'Y-m-d H:i:s' );
+
 		// No revisions
 		remove_action( 'pre_post_update', 'wp_save_post_revision' );
 
@@ -713,6 +716,9 @@ class bbPressModeration {
 
 		// Set public status
 		$reply->post_status = bbp_get_public_status_id();
+
+		// Keep the goddamn date
+		$reply->edit_date = $reply->post_date_gmt = get_gmt_from_date( $reply->post_date, 'Y-m-d H:i:s' );
 
 		// No revisions
 		remove_action( 'pre_post_update', 'wp_save_post_revision' );
