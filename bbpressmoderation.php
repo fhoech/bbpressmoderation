@@ -163,28 +163,28 @@ class bbPressModeration {
 			// Anon user - check if need to moderate
 			
 			if ( ( 'topic' == $data['post_type'] && get_option(self::TD . 'always_approve_topics') ) || ( 'reply' == $data['post_type'] && get_option(self::TD . 'always_approve_replies') ) ) {
-						// fix for v.1.8.3 separate settings for anonymous posting
-    				$data['post_status'] = 'pending';
-    			}
-    } else {
-    			// Registered user
-    			if (get_option(self::TD . 'previously_approved')) {
-    				// Check if user already posted 
-    				$sql = $wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_author = %d AND post_type IN ('topic','reply') AND post_status = 'publish'", $data['post_author']);
-    				$count = $wpdb->get_var($sql);
-    				if (!$count) {
-						// Check if user has approved comment
-						$user_info = get_userdata( $data['post_author'] );
-						$sql = $wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->comments} WHERE comment_author_email = %s AND comment_approved = 1", $user_info->user_email);
-						$count = $wpdb->get_var($sql);
-						if (!$count) {
-							// User never posted or commented so mark as pending.
-							$data['post_status'] = 'pending';
-						}
+				// fix for v.1.8.3 separate settings for anonymous posting
+    			$data['post_status'] = 'pending';
+    		}
+		} else {
+			// Registered user
+			if (get_option(self::TD . 'previously_approved')) {
+				// Check if user already posted 
+				$sql = $wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_author = %d AND post_type IN ('topic','reply') AND post_status = 'publish'", $data['post_author']);
+				$count = $wpdb->get_var($sql);
+				if (!$count) {
+					// Check if user has approved comment
+					$user_info = get_userdata( $data['post_author'] );
+					$sql = $wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->comments} WHERE comment_author_email = %s AND comment_approved = 1", $user_info->user_email);
+					$count = $wpdb->get_var($sql);
+					if (!$count) {
+						// User never posted or commented so mark as pending.
+						$data['post_status'] = 'pending';
 					}
-    			} else {
-    				$data['post_status'] = 'pending';
-    			} 		
+				}
+			} else {
+				$data['post_status'] = 'pending';
+			}
 		}
 		return $data;
 	}
