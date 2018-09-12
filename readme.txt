@@ -4,7 +4,7 @@ Donate link: http://CodeIncubator.co.uk/index.html
 Tags: bbPress, moderation, approve, moderate, approval, spam, bbpress moderation
 Requires at least: 3.3
 Tested up to: 4.7
-Stable tag: 1.9.0
+Stable tag: 1.9.2
 
 Add the ability to moderate and approve new topics and replies in the bbPress V2.0 plugin
 
@@ -67,6 +67,12 @@ To approve the post, click the "Approve" link, or edit and click "Publish".
 Initial version
 
 == Changelog ==
+
+= 1.9.2 - 12th Sep 2018 =
+* Skip moderation also if user has approved comments
+
+= 1.9.1 - 25th Jan 2018 =
+* Keep post date when approving posts
 
 = 1.9.0 - 3rd Jan 2017 =
 * Changed 'Always display' option to 'Display for moderators and original author': If enabled, pending topics/replies are visible in the frontend to the original author and users with moderation privileges (but nobody else), and if disabled, pending topics/replies will only be visible in the backend.

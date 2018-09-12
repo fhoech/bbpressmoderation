@@ -3,14 +3,14 @@
 Plugin Name: bbPress Moderation
 Description: Moderate bbPress topics and replies
 Author: Ian Stanley
-Version: 1.9.0
+Version: 1.9.2
 Author URI: http://codeincubator.co.uk
 
 
  Copyright: 		Ian Stanley, 2013- (email:iandstanley@gmail.com)
  Maintainer:		Ian Stanley, 2013-  (email iandstanley@gmail.com)
  Original Design by Ian Haycox, 2011-2013 (email : ian.haycox@gmail.com)
- Changes in version 1.9 by Florian Höch (florian <dot> hoech <at> gmx <dot> net)
+ Changes in version 1.9+ by Florian Höch (florian <dot> hoech <at> gmx <dot> net)
 
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -169,13 +169,19 @@ class bbPressModeration {
     } else {
     			// Registered user
     			if (get_option(self::TD . 'previously_approved')) {
-    				// Check if user already published 
+    				// Check if user already posted 
     				$sql = $wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->posts} WHERE post_author = %d AND post_type IN ('topic','reply') AND post_status = 'publish'", $data['post_author']);
     				$count = $wpdb->get_var($sql);
     				if (!$count) {
-    					// Anon or User never published topic/reply so mark as pending.
-    					$data['post_status'] = 'pending';
-    				}
+						// Check if user has approved comment
+						$user_info = get_userdata( $data['post_author'] );
+						$sql = $wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->comments} WHERE comment_author_email = %s AND comment_approved = 1", $user_info->user_email);
+						$count = $wpdb->get_var($sql);
+						if (!$count) {
+							// User never posted or commented so mark as pending.
+							$data['post_status'] = 'pending';
+						}
+					}
     			} else {
     				$data['post_status'] = 'pending';
     			} 		
