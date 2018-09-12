@@ -164,8 +164,8 @@ class bbPressModeration {
 			
 			if ( ( 'topic' == $data['post_type'] && get_option(self::TD . 'always_approve_topics') ) || ( 'reply' == $data['post_type'] && get_option(self::TD . 'always_approve_replies') ) ) {
 				// fix for v.1.8.3 separate settings for anonymous posting
-    			$data['post_status'] = 'pending';
-    		}
+				$data['post_status'] = 'pending';
+			}
 		} else {
 			// Registered user
 			if (get_option(self::TD . 'previously_approved')) {
