@@ -340,7 +340,7 @@ class bbPressModeration {
 		$status = bbp_get_reply_status($reply_id);
 		
 		if ($status == 'pending') {
-			$this->notify_admin($reply_id);
+			$this->notify_admin($reply_id, true);
 		}
 	}
 	
@@ -365,13 +365,13 @@ class bbPressModeration {
 	/**
 	 * Alert admin of pending topic/reply
 	 */
-	function notify_admin($post_id) {
+	function notify_admin($post_id, $is_reply = false) {
 		
 		if (get_option(self::TD . 'notify')) {
 			
 			$blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
 			$blogurl = get_option('home');
-			$message  = sprintf(__('New topic/reply awaiting moderation on your site %s: %s', self::TD), $blogname, $blogurl) . "\r\n\r\n";
+			$message  = sprintf(__('New %s awaiting moderation on your site %s: %s', self::TD), $is_reply ? 'reply' : 'topic', $blogname, $blogurl) . "\r\n\r\n";
 
 			/* Add body of topic/reply to email */
 			$post = get_post($post_id);
